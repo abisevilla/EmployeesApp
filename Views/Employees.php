@@ -2,11 +2,11 @@
 
 <!-- html view for employee table -->
 <div class="container">
-<div> <h1> Gestión de Empleados</h1></div>
+<div> <h1> Employees</h1></div>
 <div class="row">
 <div class="form-group">
 
-<button class="btn btn-success" data-toggle="modal" data-target="#myModal">  Agregar </button>
+<button class="btn btn-success" data-toggle="modal" data-target="#myModal">  Add new </button>
 </div>
 </div>
 
@@ -36,7 +36,7 @@ while ($row = $list->fetch()) {
         <td>    <?php echo  $row['Phone']?> </td>
         <td>    <?php echo  $row['EmployeeEmail']?> </td>
         <td>    <?php echo  $row['HireDate']?> </td>
-        <td>  <button data-idemp="<?php echo $row['IdEmployee']?>" class="btn-modify btn btn-primary"> Modificar</button> <button data-idemp="<?php echo $row['IdEmployee']?>" class="btnDelete btn btn-danger"> Eliminar</button>  </td>                
+        <td>  <button data-idemp="<?php echo $row['IdEmployee']?>" class="btn-modify btn btn-primary"> Update</button> <button data-idemp="<?php echo $row['IdEmployee']?>" class="btnDelete btn btn-danger"> Delete</button>  </td>                
             </tr>
 
             <?php
