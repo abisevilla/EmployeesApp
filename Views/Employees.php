@@ -1,4 +1,6 @@
 
+
+<!-- html view for employee table -->
 <div class="container">
 <div> <h1> Gestión de Empleados</h1></div>
 <div class="row">
@@ -60,7 +62,7 @@ while ($row = $list->fetch()) {
     
 </div>
 
-
+<!-- html view for update form -->
 
 <div  id="updatemodal" class="modal fade"  role="dialog">
         <div class="modal-dialog" role="document">
@@ -115,11 +117,12 @@ while ($row = $list->fetch()) {
 
 
 
-<!-- Modal -->
+<!-- html view for insert form -->
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
-    <!-- Modal content-->
+
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>

@@ -1,6 +1,6 @@
 <?php
 
-
+//check type request for the controller and according to action a specific function is called
    if($_POST)
    {
         $array = json_decode($_REQUEST['info']);
@@ -34,7 +34,7 @@
 
 
    
-
+//receive data to insert in data base
 function InsertEmployee($data=null)
 {    
     if($data){
@@ -48,7 +48,7 @@ function InsertEmployee($data=null)
 
 
 }
-
+//receive id to get employees from data base
 function GetEmployeeById($id)
 {
     include_once("../Model/Employee.php");
@@ -59,7 +59,7 @@ function GetEmployeeById($id)
     return json_encode($results);
 
 }
-
+//receive data to update  employees in data base
 function UpdateEmployeById($data=null){
     
     if($data){
@@ -71,7 +71,7 @@ function UpdateEmployeById($data=null){
         }    
 }
 }
-
+//receive id to delete  employees in data base
 function DeleteEmployeById($data=null){
     
     if($data){

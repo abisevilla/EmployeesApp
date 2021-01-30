@@ -20,12 +20,12 @@
 
 
 <?php
-
+//main controller
  include_once("Controller/EmployeeController.php");
  
 ?>
 </div>
-
+<!-- js file with jquery functions --> 
 <script src="js/app.js"></script>
 
 

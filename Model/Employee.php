@@ -13,7 +13,7 @@ include("../Model/connect.php");
 }
 
 
-
+//claa to connect to data base and execute querys
 
 class EmployeeModel extends connection{
 

@@ -1,6 +1,6 @@
 <?php
 
-
+//web service to get all employees saved in database
 if( $_SERVER['REQUEST_METHOD'] == 'GET'){
 
 
