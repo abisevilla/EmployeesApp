@@ -34,7 +34,7 @@ while ($row = $list->fetch()) {
         <td>    <?php echo  $row['Phone']?> </td>
         <td>    <?php echo  $row['EmployeeEmail']?> </td>
         <td>    <?php echo  $row['HireDate']?> </td>
-        <td>  <button data-idemp="<?php echo $row['IdEmployee']?>" class="btn-modify btn btn-primary"> Modificar</button> <button data-idemp="<?php echo $row['IdEmployee']?>" class="btn btn-danger"> Eliminar</button>  </td>                
+        <td>  <button data-idemp="<?php echo $row['IdEmployee']?>" class="btn-modify btn btn-primary"> Modificar</button> <button data-idemp="<?php echo $row['IdEmployee']?>" class="btnDelete btn btn-danger"> Eliminar</button>  </td>                
             </tr>
 
             <?php

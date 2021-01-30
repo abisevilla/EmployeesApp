@@ -78,16 +78,12 @@ $(document).ready(function() {
 
 
      
-    $('#btnDelete').click(function(){
+    $('.btnDelete').click(function(){
              
         var  array = JSON.stringify({
-         'id': $("#id_emp").val(),
-         'name': $("#name").val() ,
-         'lastname': $("#lastname").val() ,
-         'phone': $("#phone").val(),
-         'mail': $("#mail").val(),
-         'hire': $("#hire").val(),
-         'action': "update"}); 
+         'id': $(this).data('idemp'),
+        
+         'action': "delete"}); 
  
          $.ajax({
              url : 'Controller/EmployeeController.php',

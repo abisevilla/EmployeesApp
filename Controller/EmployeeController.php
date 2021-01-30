@@ -12,6 +12,9 @@
             case 'update':
                 UpdateEmployeById($array);
                     break;
+            case 'delete':
+                DeleteEmployeById($array);
+                            break;
             
         }
     }else if($_SERVER['REQUEST_METHOD'] === 'GET'){
@@ -68,6 +71,21 @@ function UpdateEmployeById($data=null){
         }    
 }
 }
+
+function DeleteEmployeById($data=null){
+    
+    if($data){
+        if(isset($data->{'id'})) {
+            require_once("../Model/Employee.php");
+            $emp_model = new EmployeeModel();
+          $result=  $emp_model->DeleteEmployee($data->{'id'});
+    
+        }    
+}
+
+
+}
+
 
 
 ?>

@@ -1,5 +1,7 @@
 <?php
 
+
+
 if($_POST)
 {
 include("../Model/connect.php");
@@ -9,6 +11,9 @@ include("../Model/connect.php");
 }else{
     include_once("../Model/connect.php");
 }
+
+
+
 
 class EmployeeModel extends connection{
 
@@ -46,6 +51,26 @@ try{
             echo $id.$name.$lastname.$phone.$email.$hire;
                 $sql = "UPDATE employe SET EmployeeName=?, 	EmployeeLastName=?, Phone=? , EmployeeEmail=?, HireDate=? WHERE IdEmployee=?";
                $x= $this->connect()->prepare($sql)->execute([$name, $lastname, $phone, $email, $hire,$id]);
+               echo $x;
+              
+            }catch(PDOException $e){
+                    print "¡Error!: " . $e->getMessage() . "<br/>";
+                    die();
+            
+                 }
+        
+                
+            }
+
+
+
+            
+    function DeleteEmployee($id){
+        try{
+           
+            
+                $sql = "DELETE  FROM EMPLOYE WHERE IdEmployee=?";
+               $x= $this->connect()->prepare($sql)->execute([$id]);
                echo $x;
               
             }catch(PDOException $e){
