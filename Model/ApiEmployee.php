@@ -9,18 +9,15 @@ if( $_SERVER['REQUEST_METHOD'] == 'GET'){
     $emp_list= array();
     $emp_list["items"]=array();
 
-    $res =   $pdo->query("Select * from employe");;
+    $res =   $pdo->query("Select EmployeeName from employe");;
 
     if($res->rowCount()){
         while ($row = $res->fetch(PDO::FETCH_ASSOC)){
 
             $item=array(
-                "IdEmployee" => $row['IdEmployee'],
-                "EmployeeName" => $row['EmployeeName'],
-                "EmployeeLastName" => $row['EmployeeLastName'],
-                  "Phone" => $row['Phone'],
-                   "EmployeeEmail" => $row['EmployeeEmail'],
-                 "HireDate" => $row['HireDate'],               
+               
+                "EmployeeName" => $row['EmployeeName']
+                             
 
             );
             array_push($emp_list["items"], $item);
